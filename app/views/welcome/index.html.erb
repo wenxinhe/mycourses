@@ -12,7 +12,7 @@
                   <td><%= course.no %></td>
                   <td><%= course.title %></td>
                   <td>
-                    <form method="post" action="<%= course_comments_path(course)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= course.comments.length %></span></button></form>
+                    <form method="post" action="<%= course_wants_path(course)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= course.wants.length %></span></button></form>
                   </td>
                 </tr>
               <% end %>

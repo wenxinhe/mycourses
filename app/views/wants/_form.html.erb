@@ -1,0 +1,9 @@
+<%= form_for([@course, @course.wants.build]) do |f| %>
+  <p>
+    <%= f.label :wanter %><br>
+    <%= f.text_field :wanter %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

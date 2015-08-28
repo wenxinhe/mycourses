@@ -12,11 +12,11 @@
   <%= @course.text %>
 </p>
 
-<h2>Comments</h2>
-<%= render @course.comments %>
+<h2>Wants</h2>
+<%= render @course.wants %>
 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+<h2>Add a want:</h2>
+<%= render "wants/form" %>
 
 <%= link_to 'Back', courses_path %>
 | <%= link_to 'Edit', edit_course_path(@course) %>

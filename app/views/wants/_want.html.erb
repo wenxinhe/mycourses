@@ -1,0 +1,10 @@
+<p>
+  <strong>Wanter:</strong>
+  <%= want.wanter %>
+</p>
+ 
+<p>
+  <%= link_to 'Destroy Want', [want.course, want],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
