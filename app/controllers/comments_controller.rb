@@ -3,16 +3,16 @@ class CommentsController < ApplicationController
   http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
   
   def create
-    @article = Article.find(params[:article_id])
-    @comment = @article.comments.create(params[:comment])
+    @course = Course.find(params[:course_id])
+    @comment = @course.comments.create(params[:comment])
     redirect_to welcome_index_path
   end
   
   def destroy
-    @article = Article.find(params[:article_id])
-    @comment = @article.comments.find(params[:id])
+    @course = Course.find(params[:course_id])
+    @comment = @course.comments.find(params[:id])
     @comment.destroy
-    redirect_to article_path(@article)
+    redirect_to course_path(@course)
   end
 
   private
