@@ -55,19 +55,19 @@
       <div class="starter-template">     
         <h1>Hello, Rails</h1>
         <p>
-          <%= link_to 'My Blogs', controller: 'articles' %> | <%= link_to 'New article', new_article_path %>
+          <%= link_to 'My Blogs', controller: 'courses' %> | <%= link_to 'New course', new_course_path %>
         </p>
         <div class="row">
           <div class="col-md-10">
             <table class="table table-striped">
               <tbody>
 
-                <% @articles.each do |article| %>
+                <% @courses.each do |course| %>
                   <tr>
-                    <td>no.</td>
-                    <td><%= article.title %></td>
+                    <td><%= course.no %></td>
+                    <td><%= course.title %></td>
                     <td>
-                      <form method="post" action="<%= article_comments_path(article)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= article.comments.length %></span></button></form>
+                      <form method="post" action="<%= course_comments_path(course)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= course.comments.length %></span></button></form>
                     </td>
                   </tr>
                 <% end %>

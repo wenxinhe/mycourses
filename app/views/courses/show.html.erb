@@ -1,0 +1,22 @@
+<p>
+  <strong>Num:</strong>
+  <%= @course.no %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @course.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @course.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @course.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+<%= link_to 'Back', courses_path %>
+| <%= link_to 'Edit', edit_course_path(@course) %>

@@ -55,20 +55,20 @@
       <div class="starter-template">     
         <h1>Hello, Rails</h1>
         <p>
-          <%= link_to 'My Blogs', controller: 'articles' %> | <%= link_to 'New article', new_article_path %>
+          <%= link_to 'My Blogs', controller: 'courses' %> | <%= link_to 'New course', new_course_path %>
         </p>
         <div class="row">
           <div class="col-md-10">
             <table class="table table-striped">
               <tbody>
 
-                <% @articles.each do |article| %>
+                <% @courses.each do |course| %>
                   <tr>
-                    <td>no.</td>
-                    <td><%= article.title %></td>
-                    <td><%= link_to 'Show', article_path(article) %></td>
-                    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-                    <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td><%= course.no %></td>
+                    <td><%= course.title %></td>
+                    <td><%= link_to 'Show', course_path(course) %></td>
+                    <td><%= link_to 'Edit', edit_course_path(course) %></td>
+                    <td><%= link_to 'Destroy', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                 <% end %>
               </tbody>
