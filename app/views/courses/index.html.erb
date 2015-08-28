@@ -1,26 +1,25 @@
-<div class="container bs-docs-container lead">
-<div class="starter-template">     
-  <h1>Hello, Rails</h1>
-  <p>
-    <%= link_to 'My Blogs', controller: 'courses' %> | <%= link_to 'New course', new_course_path %>
-  </p>
-  <div class="row">
-    <div class="col-md-10">
-      <table class="table table-striped">
-        <tbody>
+    <div class="container bs-docs-container lead">     
+      <h1>Hello, Rails</h1>
+      <p>
+        <%= link_to 'My Blogs', controller: 'courses' %> | <%= link_to 'New course', new_course_path %>
+      </p>
+      <div class="row">
+        <div class="col-md-10">
+          <table class="table table-striped">
+            <tbody>
 
-          <% @courses.each do |course| %>
-            <tr>
-              <td><%= course.no %></td>
-              <td><%= course.title %></td>
-              <td><%= link_to 'Show', course_path(course) %></td>
-              <td><%= link_to 'Edit', edit_course_path(course) %></td>
-              <td><%= link_to 'Destroy', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      </h4>
-    </div>
-  </div> 
-</div><!-- /.container -->
+              <% @courses.each do |course| %>
+                <tr>
+                  <td><%= course.no %></td>
+                  <td><%= course.title %></td>
+                  <td><%= link_to 'Show', course_path(course) %></td>
+                  <td><%= link_to 'Edit', edit_course_path(course) %></td>
+                  <td><%= link_to 'Destroy', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          </h4>
+        </div>
+      </div> 
+    </div><!-- /.container -->
