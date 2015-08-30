@@ -1,7 +1,10 @@
-    <div class="container bs-docs-container lead">
+      <% if notice %>
+        <div class="alert alert-success" role="alert"><%= notice %></div>
+      <% end %>
       <h1>课程列表</h1>
       <p>
         <%= link_to 'Administration', controller: 'courses' %>
+        | <%= link_to 'feedback', new_feedback_path %>
       </p>
       <div class="row">
         <div class="col-md-10">
@@ -21,4 +24,3 @@
           </h4>
         </div>
       </div>
-    </div><!-- /.container -->
