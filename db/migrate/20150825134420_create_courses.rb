@@ -1,8 +1,9 @@
-class CreateArticles < ActiveRecord::Migration
+class CreateCourses < ActiveRecord::Migration
   def change
-    create_table :articles do |t|
+    create_table :courses do |t|
       t.string :title
       t.text :text
+      t.string :no
 
       t.timestamps null: false
     end
