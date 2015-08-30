@@ -4,7 +4,7 @@
       <h1>课程列表</h1>
       <p>
         <%= link_to 'Administration', controller: 'courses' %>
-        | <%= link_to 'Feedback', new_feedback_path %>
+        | <%= link_to 'Feedback', new_feedback_path %> <span class="badge"><%=@feedbacks.length%></span>
       </p>
       <div class="row">
         <div class="col-md-10">
