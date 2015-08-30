@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret"
+  http_basic_authenticate_with name: "vincent", password: "123"
   
   def new
     @course = Course.new

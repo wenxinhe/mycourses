@@ -1,6 +1,6 @@
 class WantsController < ApplicationController
   
-  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+  http_basic_authenticate_with name: "vincent", password: "123", only: :destroy
   
   def create
     @course = Course.find(params[:course_id])
