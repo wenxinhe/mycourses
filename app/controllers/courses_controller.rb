@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
   end
 
   def index
-    @courses = Course.all.order('no ASC')
+    @courses = Course.all.order('CAST(no as INT) ASC')
   end
 
   def edit
