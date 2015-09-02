@@ -12,19 +12,19 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :subject%><br>
+    <%= f.label '主题' %><br>
     <%= f.text_field :subject, :class => 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :description %><br>
+    <%= f.label '内容' %><br>
     <%= f.text_area :description, :class => 'form-control', :rows => '6'  %>
   </div>
   <div class="form-group">
-    <%= f.label :contact%><br>
+    <%= f.label '联系方式' %><br>
     <%= f.text_field :contact, :class => 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Submit', :class => 'btn btn-default'%>
+    <%= f.submit '提交', :class => 'btn btn-default'%>
   </div>
 <% end %>
