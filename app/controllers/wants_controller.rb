@@ -5,7 +5,9 @@ class WantsController < ApplicationController
   def create
     @course = Course.find(params[:course_id])
     @want = @course.wants.create(params[:want])
-    redirect_to welcome_index_path
+    @want.update_attributes(:wanter => request.remote_ip)
+    
+    redirect_to courses_path, notice: '您选择了"' + @course.title + '"，感谢您的反馈，谢谢！'
   end
   
   def destroy
