@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 
-  http_basic_authenticate_with name: "vincent", password: "123"
+  http_basic_authenticate_with name: "vincent", password: "123", except: [:index]
   
   def new
     @course = Course.new
@@ -20,6 +20,11 @@ class CoursesController < ApplicationController
   end
 
   def index
+    @courses = Course.all.order('CAST(no as INT) ASC')
+    @feedbacks = Feedback.all
+  end
+
+  def admin
     @courses = Course.all.order('CAST(no as INT) ASC')
   end
 

@@ -1,19 +1,22 @@
-      <h1>Hello, Rails</h1>
+      <% if notice %>
+        <div class="alert alert-success" role="alert"><%= notice %></div>
+      <% end %>
+      <h1>课程列表</h1>
       <p>
-        <%= link_to 'New course', new_course_path %>
+        <%= link_to 'Administration', controller: 'courses', action: :admin %>
+        | <%= link_to 'Feedback', new_feedback_path %> <span class="badge"><%=@feedbacks.length%></span>
       </p>
       <div class="row">
         <div class="col-md-10">
           <table class="table table-striped">
             <tbody>
-
               <% @courses.each do |course| %>
                 <tr>
                   <td><%= course.no %></td>
                   <td><%= course.title %></td>
-                  <td><%= link_to 'Show', course_path(course) %></td>
-                  <td><%= link_to 'Edit', edit_course_path(course) %></td>
-                  <td><%= link_to 'Destroy', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td>
+                    <form method="post" action="<%= course_wants_path(course)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= course.wants.length %></span></button></form>
+                  </td>
                 </tr>
               <% end %>
             </tbody>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  
   get 'welcome/index'
+
+  get 'courses/admin'
   
   resources :courses do
     resources :wants
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'courses#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

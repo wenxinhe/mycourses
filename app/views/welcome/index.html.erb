@@ -1,26 +1,21 @@
-      <% if notice %>
-        <div class="alert alert-success" role="alert"><%= notice %></div>
-      <% end %>
-      <h1>课程列表</h1>
+      <h1>何文鑫 Vincent HE</h1>
       <p>
-        <%= link_to 'Administration', controller: 'courses' %>
-        | <%= link_to 'Feedback', new_feedback_path %> <span class="badge"><%=@feedbacks.length%></span>
+       联系方式
+        <ul>Github：https://github.com/wenxinhe</ul>
+        <ul>E-mail：wenxin.he@gmail.com</ul>
       </p>
-      <div class="row">
-        <div class="col-md-10">
-          <table class="table table-striped">
-            <tbody>
-              <% @courses.each do |course| %>
-                <tr>
-                  <td><%= course.no %></td>
-                  <td><%= course.title %></td>
-                  <td>
-                    <form method="post" action="<%= course_wants_path(course)%>"><input type="hidden" name="authenticity_token" value="kc599IEyVyZ4wctwGxDDrSQtwxC9Oo/engUlNVWYbYwIefmvm0ovSCtaTeAJj0pkMFLOw1bLT6vQ7ZrhsvlbbA==" /><button type="submit" class="btn btn-sm btn-success" >想听 <span class="badge"><%= course.wants.length %></span></button></form>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-          </h4>
-        </div>
-      </div>
+<p>我不愿成为一个有保障的市民。</p>
+
+<p>我是不会选择去做一个普通人的，如果能够做到的话，我有权成为一位不寻常的人，我寻找机会，但我不寻找安稳，我不希望在国家的照顾下成为一名有保障的市民，那将被人瞧不起而使我痛苦不堪。</p>
+
+<p>我要作有意义的冒险，我要梦想，我要创造，我要失败，我也要成功！</p>
+
+<p>我拒绝用刺激来换取施舍，我宁愿向生活挑战，而不愿过着有保证的生活，宁愿要达到目的的激动而不要乌托邦或毫无生气的平静。</p>
+
+<p>我不会拿我的自由去与慈善作交易，也不会拿我的尊严去与发给乞丐的食物作交易，我决不会在任何一位大师面前发抖，也不会为任何恐吓所屈。</p>
+
+<p>我的天性是挺胸直前骄傲而无所畏惧，我勇敢地面对这个世界，自豪地说：在上帝的帮助下，我已经做到了。</p>
+
+<p>– 美国企业家宣言
+      </p>
+      
