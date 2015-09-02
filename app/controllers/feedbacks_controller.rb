@@ -29,7 +29,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
-        format.html { redirect_to welcome_index_path, notice: '感谢您的反馈，谢谢！' }
+        format.html { redirect_to courses_path, notice: '感谢您的反馈，谢谢！' }
         format.json { render :show, status: :created, location: @feedback }
       else
         format.html { render :new }
