@@ -1,11 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This README would normally document whatever steps are necessary to get the application up and running.
 
 * Ruby version
+
+Whatever, ruby "2.2.1" is specified in Gemfile
 
 * System dependencies
 
@@ -13,7 +12,13 @@ Things you may want to cover:
 
 * Database creation
 
+Default DB is postgreSQL for heroku deployment.
+
+You can change to sqlite by renaming database.yml.sqlite to database.yml. (make suer sqlite3 --version is OK)
+
 * Database initialization
+
+```rake db:migrate 
 
 * How to run the test suite
 
@@ -21,7 +26,9 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Local run up
+
+./bin/start.sh
 
 
 Please feel free to use a different markup language if you do not plan to run
