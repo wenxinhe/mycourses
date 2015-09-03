@@ -71,7 +71,8 @@
       </div>
     </nav>
 
-    <% Keen.publish("visits", { :ip => request.remote_ip }) %>
+    <%= unless ENV['LOCAL'] 
+      Keen.publish("visits", { :ip => request.remote_ip }) end %>
 
     <div class="container bs-docs-container lead">
       <%= yield %>
