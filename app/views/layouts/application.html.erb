@@ -71,6 +71,8 @@
       </div>
     </nav>
 
+    <% Keen.publish("visits", { :ip => request.remote_ip }) %>
+
     <div class="container bs-docs-container lead">
       <%= yield %>
     </div><!-- /.container -->
