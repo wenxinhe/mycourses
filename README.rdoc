@@ -18,7 +18,7 @@ You can change to sqlite by renaming database.yml.sqlite to database.yml. (make 
 
 * Database initialization
 
-```rake db:migrate 
+``` rake db:migrate 
 
 * How to run the test suite
 
